@@ -1,0 +1,16 @@
+# TEMPLATE pipeline: lints Markdown files only.
+# Runs on merge requests and on the default branch.
+
+stages:
+  - lint
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+markdown-lint:
+  stage: lint
+  image: node:20-alpine
+  script:
+    - npx --yes markdownlint-cli2 "**/*.md" "#node_modules"

@@ -1,0 +1,4 @@
+dep_id,dependency,depends_on_team_or_person,needed_by_workstream,needed_by_date,status,risk_if_late,mitigation,owner,last_updated
+D-001,Signed-off scope,Sample Sponsor,Training content,2026-01-15,Delivered,Drafting would start on shaky ground,Sign-off recorded,Sample Owner A,2026-01-15
+D-002,Tooling access approval,Sample Approver,Tooling setup,2026-02-09,At risk,Pilot start slips,Escalate; agree fallback to manual process,Sample Owner C,2026-02-09
+D-003,Pilot group nominated,Sample Sponsor,Pilot rollout,2026-02-16,Requested,Pilot cannot start,Ask in weekly status,Sample Owner A,2026-02-09

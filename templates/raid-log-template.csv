@@ -1,0 +1,5 @@
+id,category,title,description,owner,status,likelihood,impact,priority,mitigation_or_action,date_raised,due_date,last_updated
+R-001,Risk,,,,Open,,,,,,,
+A-001,Assumption,,,,Open,,,,,,,
+I-001,Issue,,,,Open,,,,,,,
+D-001,Dependency,,,,Open,,,,,,,

@@ -1,0 +1,6 @@
+id,category,title,description,owner,status,likelihood,impact,priority,mitigation_or_action,date_raised,due_date,last_updated
+R-001,Risk,Pilot group not confirmed,Pilot participants may not be agreed before module 2 is ready,Sample Owner A,Open,Medium,Medium,Medium,Ask sponsor to nominate pilot group by the due date,2026-02-02,2026-02-16,2026-02-09
+R-002,Risk,Content review capacity,Reviewers may be unavailable during a busy period,Sample Owner B,Mitigating,High,Low,Medium,Book review slots two weeks ahead,2026-02-02,2026-02-13,2026-02-09
+A-001,Assumption,Existing tools are enough,Assume current collaboration tools meet needs without new purchases,Sample Owner C,Open,,,Low,Validate during the pilot,2026-01-20,2026-03-05,2026-02-02
+I-001,Issue,Tooling access not approved,Access request has been pending longer than planned,Sample Owner C,Open,,High,High,Escalate to approver; decision needed by 2026-02-09,2026-01-29,2026-02-09,2026-02-09
+D-001,Dependency,Scope sign-off,Module drafting depends on signed-off scope,Sample Owner A,Closed,,,Low,Sign-off recorded,2026-01-10,2026-01-15,2026-01-15
