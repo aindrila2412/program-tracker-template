@@ -1,8 +1,8 @@
 # Program Tracker Template
 
 A small starter kit I put together for tracking a program or project with plain GitHub or GitLab issues. It has issue
-templates, a RAID log, a dependency register, a weekly status template, a program charter template and a Markdown lint
-check.
+templates, a RAID log, a dependency register, a weekly status template, a program charter template, a decision log
+template and a Markdown lint check.
 
 Everything in it is made-up sample content. The names, dates and statuses are fictional, and none of it comes from real
 client, employer or team work.
@@ -17,7 +17,8 @@ Copy the files you want into a new repo or project. If you're on GitHub, keep `.
 post a status issue each week. The RAID log and dependency register are CSV files so they open in any spreadsheet, and
 there's a Markdown version of the RAID log too. Open a retrospective issue at each milestone.
 
-The templates are in `templates/` and the filled-in fictional examples are in `examples/`.
+The templates are in `templates/` and the filled-in fictional examples are in `examples/`. The decision log is just a
+table for noting what was decided, by whom and why.
 
 ## Labels
 
