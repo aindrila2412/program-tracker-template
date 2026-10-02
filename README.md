@@ -1,100 +1,48 @@
 # Program Tracker Template
 
-A personal, reusable starter kit for running a small program or project on GitHub or GitLab issues: issue templates, a RAID log, a weekly status report, a program charter, and a Markdown lint check.
+A small starter kit I put together for tracking a program or project with plain GitHub or GitLab issues. It has issue
+templates, a RAID log, a dependency register, a weekly status template, a program charter template and a Markdown lint
+check.
 
-> **Personal template project. Sample data only.**
-> Every name, date, and status in this repository is **fictional sample content**. Nothing here describes real client, employer, or team work, and no real metrics are included.
+Everything in it is made-up sample content. The names, dates and statuses are fictional, and none of it comes from real
+client, employer or team work.
 
-## Purpose
+I made this to practise keeping a program visible in writing, without needing any special tooling. It's a starting
+point, not a method you have to follow.
 
-I built this to practise (and share) a simple, async-first way to track a program using only core platform features. It is a starting point to adapt, not a prescribed methodology.
+## How I'd use it
 
-## What is inside
+Copy the files you want into a new repo or project. If you're on GitHub, keep `.github/ISSUE_TEMPLATE/` and delete
+`.gitlab/`. If you're on GitLab, do the opposite. Then create the labels below, fill in the charter at kick-off, and
+post a status issue each week. The RAID log and dependency register are CSV files so they open in any spreadsheet, and
+there's a Markdown version of the RAID log too. Open a retrospective issue at each milestone.
 
-```text
-program-tracker-template/
-├── README.md
-├── LICENSE
-├── .gitignore
-├── .markdownlint.json
-├── .gitlab-ci.yml                     # GitLab CI: markdown lint
-├── .github/
-│   ├── ISSUE_TEMPLATE/                # GitHub issue templates
-│   │   ├── config.yml
-│   │   ├── risk-blocker.md
-│   │   ├── status-update.md
-│   │   └── retrospective.md
-│   └── workflows/markdownlint.yml     # GitHub Actions: markdown lint
-├── .gitlab/issue_templates/           # GitLab issue templates
-│   ├── risk-blocker.md
-│   ├── status-update.md
-│   └── retrospective.md
-├── templates/
-│   ├── program-charter-template.md
-│   ├── weekly-status-template.md
-│   ├── raid-log-template.md
-│   ├── raid-log-template.csv
-│   └── dependency-register-template.csv
-└── examples/                          # fictional, filled-in samples
-    ├── sample-charter-fictional.md
-    ├── sample-weekly-status-fictional.md
-    ├── raid-log-sample.csv
-    └── dependency-register-sample.csv
-```
-
-## How to use it
-
-1. Create a new repository or project and copy in the files you need.
-2. **Issue templates:** keep `.github/ISSUE_TEMPLATE/` for GitHub or `.gitlab/issue_templates/` for GitLab (delete the other).
-3. **Labels:** create the labels in [Labels](#labels). On GitLab, scoped labels use `::`. On GitHub, use the `type: ...` names the templates reference.
-4. **Charter:** fill in `templates/program-charter-template.md` at kick-off.
-5. **Dependencies:** list cross-team dependencies in `dependency-register-template.csv` and link them from the RAID log.
-6. **RAID log:** keep `raid-log-template.csv` in a spreadsheet, or use the Markdown version. Review it weekly.
-7. **Status:** post a weekly status issue (or copy `weekly-status-template.md`).
-8. **Retrospective:** open a retrospective issue at each milestone or at close.
-9. **CI:** the Markdown lint runs on pull/merge requests and on the default branch.
+The templates are in `templates/` and the filled-in fictional examples are in `examples/`.
 
 ## Labels
 
-| Label (GitLab scoped) | Purpose |
-|---|---|
-| `status::backlog` | Not yet started |
-| `status::in-progress` | Being worked on |
-| `status::at-risk` | Needs attention or has a risk raised |
-| `status::blocked` | Cannot proceed until a blocker is resolved |
-| `status::done` | Finished |
-| `type::workstream` | A major piece of the program |
-| `type::risk` | A risk or blocker issue |
-| `type::status-update` | Periodic status report |
-| `type::retro` | Retrospective |
+On GitLab I use scoped labels with `::`, like `status::in-progress`. On GitHub the templates expect `type: ...` style
+names, so rename them if you prefer. The set I use is:
 
-## Board layout
+- status: `backlog`, `in-progress`, `at-risk`, `blocked`, `done`
+- type: `workstream`, `risk`, `status-update`, `retro`
 
-One board with a list per status: Backlog, In progress, At risk, Blocked, Done. Optionally filter by milestone.
+A simple board with one column per status is enough: Backlog, In progress, At risk, Blocked, Done.
 
-## Sample program board (fictional)
+## Linting
 
-*Program: "Example Onboarding Revamp". Illustrative only.*
-
-| Workstream | Status | Owner | Next step | Target date |
-|---|---|---|---|---|
-| Requirements and scope | `status::done` | Sample Owner A | Sign-off recorded | 2026-01-15 |
-| Training content | `status::in-progress` | Sample Owner B | Draft module 2 | 2026-02-10 |
-| Tooling setup | `status::blocked` | Sample Owner C | Waiting on access approval | 2026-02-20 |
-| Pilot rollout | `status::backlog` | Sample Owner A | Confirm pilot group | 2026-03-05 |
-
-## Linting locally
+The CI only checks Markdown. To run it yourself:
 
 ```bash
 npx --yes markdownlint-cli2 "**/*.md" "#node_modules"
 ```
 
-## Limitations
+## Honest notes
 
-- It is a lightweight template. It does not replace a scheduling tool or a formal methodology.
-- The GitHub and GitLab templates are kept in sync by hand.
-- Scoring guides and cadences are suggestions only.
+It's lightweight on purpose and won't replace a scheduling tool. I keep the GitHub and GitLab templates in sync by
+hand, so they can drift. The cadences and scoring ideas are just suggestions. If I came back to it I'd add a short
+worked example that follows one risk from the RAID log all the way to a retrospective.
 
 ## Licence
 
-MIT. See [LICENSE](LICENSE).
+MIT, see [LICENSE](LICENSE).
